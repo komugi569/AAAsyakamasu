@@ -1,0 +1,8 @@
+{
+  "name": "Remix クロニクル・リゲイン",
+  "description": "社会科クイズに答えて敵を倒す、知識を武器に戦うターン制RPG。知識を奪還し世界を救おう。",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

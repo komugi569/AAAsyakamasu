@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@layer utilities {
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20% { transform: translateX(-8px) rotate(-1deg); }
+    40% { transform: translateX(8px) rotate(1deg); }
+    60% { transform: translateX(-6px); }
+    80% { transform: translateX(6px); }
+  }
+
+  @keyframes floatSlow {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-7px); }
+  }
+
+  @keyframes pulseAura {
+    0%, 100% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 0.9; transform: scale(1.05); }
+  }
+
+  @keyframes slashAnim {
+    0% { transform: rotate(-35deg) scaleX(0); opacity: 0; }
+    30% { transform: rotate(-35deg) scaleX(1.3); opacity: 1; }
+    100% { transform: rotate(-35deg) scaleX(1.6); opacity: 0; }
+  }
+
+  @keyframes popDamage {
+    0% { transform: translateY(0) scale(0.6); opacity: 0; }
+    20% { transform: translateY(-16px) scale(1.3); opacity: 1; }
+    80% { transform: translateY(-36px) scale(1.1); opacity: 1; }
+    100% { transform: translateY(-50px) scale(0.9); opacity: 0; }
+  }
+
+  @keyframes flashCritical {
+    0% { opacity: 0.6; }
+    100% { opacity: 0; }
+  }
+
+  @keyframes levelUpGlow {
+    0% { transform: scale(0.9); opacity: 0; }
+    50% { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  .animate-shake {
+    animation: shake 0.35s cubic-bezier(.36,.07,.19,.97) both;
+  }
+
+  .animate-float-slow {
+    animation: floatSlow 3.2s ease-in-out infinite;
+  }
+
+  .animate-pulse-aura {
+    animation: pulseAura 2s ease-in-out infinite;
+  }
+
+  .animate-slash {
+    animation: slashAnim 0.3s ease-out forwards;
+  }
+
+  .animate-pop-damage {
+    animation: popDamage 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .animate-flash-crit {
+    animation: flashCritical 0.4s ease-out forwards;
+  }
+
+  .animate-levelup {
+    animation: levelUpGlow 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .font-rpg {
+    font-family: 'Zen Kaku Gothic New', system-ui, -apple-system, sans-serif;
+  }
+
+  .font-cinzel {
+    font-family: 'Cinzel', serif;
+  }
+
+  /* Bright, warm parchment / pale-yellow scholarly RPG backdrop */
+  .bg-fantasy-stage {
+    background-color: #faf6eb;
+    background-image: 
+      radial-gradient(ellipse at 50% 12%, rgba(254, 243, 199, 0.75) 0%, transparent 70%),
+      radial-gradient(circle at 18% 42%, rgba(253, 230, 138, 0.35) 0%, transparent 50%),
+      radial-gradient(circle at 82% 58%, rgba(254, 215, 170, 0.35) 0%, transparent 50%),
+      radial-gradient(circle at 50% 88%, rgba(252, 211, 77, 0.25) 0%, transparent 55%),
+      linear-gradient(to bottom, #fefdf9 0%, #faf6eb 50%, #f5eed8 100%);
+  }
+}
+
